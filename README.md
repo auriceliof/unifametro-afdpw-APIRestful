@@ -60,6 +60,6 @@ DATE: 30/03/2024
   
     DELEÇÃO DE CLIENTE
     
-     DELETE /clients/1
+       DELETE /clients/1
   
 
