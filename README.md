@@ -17,15 +17,15 @@ DATE: 30/03/2024
 
 - CASO
 
-  Uma Universidade precisa cadastrar o dados dos seus alunos, conforme segue abaixo:
+    Uma Universidade precisa cadastrar o dados dos seus alunos, conforme segue abaixo:
   
-    NOME
-
-    CPF
-
-    DATA DE NASCIMENTO
-
-    RENDA 
+      NOME
+  
+      CPF
+  
+      DATA DE NASCIMENTO
+  
+      RENDA 
 
 
 - TESTES A SEREM REALIZADOS NO POSTMAN
