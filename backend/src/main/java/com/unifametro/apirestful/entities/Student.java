@@ -10,6 +10,7 @@ public class Student implements Serializable {
 	private Long id;
 	private String name;
 	private String cpf;
+	
 	private Instant bihtDate;
 	private Double income;
 	
