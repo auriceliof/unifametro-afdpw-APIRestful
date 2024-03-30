@@ -1,6 +1,5 @@
 package com.unifametro.apirestful.resources;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.http.ResponseEntity;
@@ -9,19 +8,18 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.unifametro.apirestful.entities.Student;
+import com.unifametro.apirestful.services.StudentService;
 
 @RestController
 @RequestMapping(value = "/students")
 public class StudentResource {
 	
+	private StudentService service;
+	
 	@GetMapping
 	public ResponseEntity<List<Student>> findAll(){
-		List<Student> list = new ArrayList<>();
 		
-			list.add(new Student(1L, "Auricelio", "123.456.789-00",  null, 15049.0));
-			list.add(new Student(2L, "Miguel", "123.456.789-00",  null, 20149.0));
-			list.add(new Student(3L, "Matheus", "123.456.789-00",  null, 13049.0));
-			list.add(new Student(4L, "Rafel", "123.456.789-00",  null, 13049.0));
+		List<Student> list = service.findAll();
 		
 		return ResponseEntity.ok().body(list);
 	}
