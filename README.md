@@ -54,9 +54,8 @@ DATE: 30/03/2024
       "income": 15089.0,
     }
 
-
-DELEÇÃO DE CLIENTE
-
-DELETE /clients/1
+  DELEÇÃO DE CLIENTE
+  
+   DELETE /clients/1
 
 
