@@ -4,22 +4,38 @@ import java.io.Serializable;
 import java.time.Instant;
 import java.util.Objects;
 
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
+
+@Entity
+@Table(name = "tb_student")
 public class Student implements Serializable {
 	private static final long serialVersionUID = 1L;
 	
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	private String name;
 	private String cpf;
 	
-	private Instant bihtDate;
+	@Column(columnDefinition = "TIMESTAMP WITH TIME ZONE")
+	private Instant bithDate;
 	private Double income;
 	
-	public Student(Long id, String name, String cpf, Instant bihtDate, Double income) {
+	public Student() {
+		
+	}
+	
+	public Student(Long id, String name, String cpf, Instant bithDate, Double income) {
 		super();
 		this.id = id;
 		this.name = name;
 		this.cpf = cpf;
-		this.bihtDate = bihtDate;
+		this.bithDate = bithDate;
 		this.income = income;
 	}
 
@@ -47,12 +63,13 @@ public class Student implements Serializable {
 		this.cpf = cpf;
 	}
 
-	public Instant getBihtDate() {
-		return bihtDate;
+	
+	public Instant getBithDate() {
+		return bithDate;
 	}
 
-	public void setBihtDate(Instant bihtDate) {
-		this.bihtDate = bihtDate;
+	public void setBithDate(Instant bithDate) {
+		this.bithDate = bithDate;
 	}
 
 	public Double getIncome() {

@@ -2,6 +2,7 @@ package com.unifametro.apirestful.resources;
 
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -14,6 +15,7 @@ import com.unifametro.apirestful.services.StudentService;
 @RequestMapping(value = "/students")
 public class StudentResource {
 	
+	@Autowired
 	private StudentService service;
 	
 	@GetMapping
@@ -24,3 +26,5 @@ public class StudentResource {
 		return ResponseEntity.ok().body(list);
 	}
 }
+
+
