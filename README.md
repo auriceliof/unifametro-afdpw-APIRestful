@@ -4,14 +4,19 @@ DATE: 30/03/2024
 
 - DEPENDÊNCIAS 
 
-  O projeto será implementado conforme abaixo: 
-  
-    IDE: Spring Boot (STS)
-    Banco de Dados: H2
-    Gerenciador de Dependências: Maven
-    Linguagem: Java
-    Versionamento: GitHub
-    Testes da API: Postman
+    O projeto será implementado conforme abaixo: 
+    
+      IDE: Spring Boot (STS)
+
+      Banco de Dados: H2
+
+      Gerenciador de Dependências: Maven
+
+      Linguagem: Java
+
+      Versionamento: GitHub
+
+      Testes da API: Postman
 
 
 
