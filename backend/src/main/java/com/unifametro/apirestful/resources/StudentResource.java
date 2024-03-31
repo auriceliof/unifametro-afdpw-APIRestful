@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.unifametro.apirestful.entities.Student;
+import com.unifametro.apirestful.dto.StudentDTO;
 import com.unifametro.apirestful.services.StudentService;
 
 @RestController
@@ -19,9 +19,9 @@ public class StudentResource {
 	private StudentService service;
 	
 	@GetMapping
-	public ResponseEntity<List<Student>> findAll(){
+	public ResponseEntity<List<StudentDTO>> findAll(){
 		
-		List<Student> list = service.findAll();
+		List<StudentDTO> list = service.findAll();
 		
 		return ResponseEntity.ok().body(list);
 	}
