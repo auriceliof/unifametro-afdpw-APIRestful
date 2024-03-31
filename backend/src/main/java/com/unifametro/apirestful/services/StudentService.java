@@ -1,10 +1,10 @@
 package com.unifametro.apirestful.services;
 
-import java.util.List;
 import java.util.Optional;
-import java.util.stream.Collectors;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -20,11 +20,11 @@ public class StudentService {
 	private StudentRepository repository;
 	
 	@Transactional(readOnly = true)
-	public List<StudentDTO> findAll(){
+	public Page<StudentDTO> findAllPaged(Pageable pageable){
 		
-		List<Student> list = repository.findAll();
+		Page<Student> list = repository.findAll(pageable);
 		
-		return list.stream().map(x -> new StudentDTO(x)).collect(Collectors.toList());
+		return list.map(x -> new StudentDTO(x));
 	}
 
 	@Transactional(readOnly = true)
