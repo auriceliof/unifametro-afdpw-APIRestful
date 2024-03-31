@@ -23,19 +23,19 @@ public class Student implements Serializable {
 	private String cpf;
 	
 	@Column(columnDefinition = "TIMESTAMP WITH TIME ZONE")
-	private Instant bithDate;
+	private Instant birthDate;
 	private Double income;
 	
 	public Student() {
 		
-	}
-	
-	public Student(Long id, String name, String cpf, Instant bithDate, Double income) {
+	}	
+
+	public Student(Long id, String name, String cpf, Instant birthDate, Double income) {
 		super();
 		this.id = id;
 		this.name = name;
 		this.cpf = cpf;
-		this.bithDate = bithDate;
+		this.birthDate = birthDate;
 		this.income = income;
 	}
 
@@ -64,12 +64,13 @@ public class Student implements Serializable {
 	}
 
 	
-	public Instant getBithDate() {
-		return bithDate;
+	
+	public Instant getBirthDate() {
+		return birthDate;
 	}
 
-	public void setBithDate(Instant bithDate) {
-		this.bithDate = bithDate;
+	public void setBirthDate(Instant birthDate) {
+		this.birthDate = birthDate;
 	}
 
 	public Double getIncome() {
