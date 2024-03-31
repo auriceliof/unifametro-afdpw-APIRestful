@@ -11,6 +11,7 @@ import org.springframework.transaction.annotation.Transactional;
 import com.unifametro.apirestful.dto.StudentDTO;
 import com.unifametro.apirestful.entities.Student;
 import com.unifametro.apirestful.repositories.StudentRepository;
+import com.unifametro.apirestful.services.exceptions.ResourceNotFoundException;
 
 @Service
 public class StudentService {
@@ -30,11 +31,12 @@ public class StudentService {
 	public StudentDTO findById(Long id) {
 
 		Optional<Student> obj = repository.findById(id);
-		Student entity = obj.get();
+		Student entity = obj.orElseThrow(() -> new ResourceNotFoundException("Entity not found"));
 		
 		return new StudentDTO(entity);
 	}
 }
+
 
 
 
