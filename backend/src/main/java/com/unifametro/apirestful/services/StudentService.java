@@ -31,6 +31,7 @@ public class StudentService {
 	public StudentDTO findById(Long id) {
 
 		Optional<Student> obj = repository.findById(id);
+		
 		Student entity = obj.orElseThrow(() -> new ResourceNotFoundException("Entity not found"));
 		
 		return new StudentDTO(entity);
@@ -50,6 +51,26 @@ public class StudentService {
 		
 		return new StudentDTO(entity);
 	}
+
+	@Transactional
+	public StudentDTO update(Long id, StudentDTO dto) {
+		try {
+			Student entity = repository.getReferenceById(id);
+			
+				entity.setName(dto.getName());
+				entity.setCpf(dto.getCpf());
+				entity.setBirthDate(dto.getBirthDate());
+				entity.setIncome(dto.getIncome());
+			
+			entity = repository.save(entity);
+			
+			return new StudentDTO(entity);			
+		}
+		catch (ResourceNotFoundException e) {
+			throw new ResourceNotFoundException("ID not found" + id);
+		}
+	}
+
 }
 
 
