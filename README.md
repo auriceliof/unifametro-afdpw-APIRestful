@@ -1,6 +1,7 @@
 @AUTHOR: Auricelio Freitas, Migue Soares
 
-DATE: 30/03/2024
+DATA: 30/03/2024
+
 ------------------------------
 
 - DEPENDÊNCIAS 
