@@ -1,4 +1,4 @@
-@AUTHOR: Auricelio Freitas, Migue Soares
+@AUTHOR: Auricelio Freitas, Miguel Soares
 
 DATA: 30/03/2024
 
