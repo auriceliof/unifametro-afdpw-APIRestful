@@ -2,13 +2,13 @@
 
 DATA: 30/03/2024
 
-------------------------------
+-----------------------------------------------------------
 
 - DEPENDÊNCIAS 
 
     O projeto será implementado conforme abaixo: 
     
-      IDE: Spring Boot (STS)
+      IDE: Spring Tool Suite 4 (STS)
 
       Banco de Dados: H2
 
