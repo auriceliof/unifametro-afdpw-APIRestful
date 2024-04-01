@@ -16,7 +16,7 @@ DATA: 30/03/2024
 
       Linguagem: Java (JDK-20)
 
-      Versionamento: GitHub
+      Versionamento: Git e GitHub
 
       Testes da API: Postman
 
