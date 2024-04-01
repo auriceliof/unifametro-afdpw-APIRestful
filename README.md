@@ -37,7 +37,7 @@ DATA: 30/03/2024
 
 - TESTES A SEREM REALIZADOS NO POSTMAN
 
-    BUSCA PAGINA DE ALUNOS
+    BUSCA PAGINADA DE ALUNOS
     
       GET /students?page=0&sort=name,asc
     
