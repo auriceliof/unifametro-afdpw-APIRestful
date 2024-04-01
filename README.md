@@ -37,17 +37,17 @@ DATA: 30/03/2024
 
 - TESTES A SEREM REALIZADOS NO POSTMAN
 
-    BUSCA PAGINA DE CLIENTES
+    BUSCA PAGINA DE ALUNOS
     
-      GET /clients?page=0&sort=name,asc
+      GET /students?page=0&sort=name,asc
     
-    BUSCA DE CLIENTE POR ID
+    BUSCA DE ALUNO POR ID
     
-      GET /clients/1
+      GET /students/1
     
-    INSERÇÃO DE NOVO CLIENTE
+    INSERIR NOVO ALUNO
     
-      POST /clients
+      POST /students
       {
         "name": "Auricelio Freitas",
         "cpf": "12345678901",
@@ -55,9 +55,9 @@ DATA: 30/03/2024
         "income": 15089.0,
       }
   
-    ATUALIZAÇÃO DE CLIENTE
+    ATUALIZAR ALUNO
     
-      PUT /clients/1
+      PUT /students/1
       {
         "name": "Auricelio Moreira",
         "cpf": "12345678901",
@@ -65,7 +65,7 @@ DATA: 30/03/2024
         "income": 15089.0,
       }
   
-    DELEÇÃO DE CLIENTE
+    DELETAR ALUNO
     
        DELETE /clients/1
   
