@@ -14,7 +14,7 @@ DATA: 30/03/2024
 
       Gerenciador de Dependências: Maven
 
-      Linguagem: Java
+      Linguagem: Java (JDK-20)
 
       Versionamento: GitHub
 
