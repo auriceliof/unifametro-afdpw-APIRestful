@@ -1,20 +1,22 @@
-@AUTHOR: Auricelio Freitas
-DATE: 30/03/2024
-------------------------------
+@AUTHOR: Auricelio Freitas, Miguel Soares
+
+DATA: 30/03/2024
+
+-----------------------------------------------------------
 
 - DEPENDÊNCIAS 
 
     O projeto será implementado conforme abaixo: 
     
-      IDE: Spring Boot (STS)
+      IDE: Spring Tool Suite 4 (STS)
 
       Banco de Dados: H2
 
       Gerenciador de Dependências: Maven
 
-      Linguagem: Java
+      Linguagem: Java (JDK-20)
 
-      Versionamento: GitHub
+      Versionamento: Git e GitHub
 
       Testes da API: Postman
 
@@ -22,7 +24,7 @@ DATE: 30/03/2024
 
 - CASO
 
-    Uma Universidade precisa cadastrar o dados dos seus alunos, conforme segue abaixo:
+    Uma Universidade precisa cadastrar os seus alunos, conforme segue abaixo:
   
       NOME
   
@@ -35,17 +37,17 @@ DATE: 30/03/2024
 
 - TESTES A SEREM REALIZADOS NO POSTMAN
 
-    BUSCA PAGINA DE CLIENTES
+    BUSCA PAGINADA DE ALUNOS
     
-      GET /clients?page=0&sort=name,asc
+      GET /students?page=0&sort=name,asc
     
-    BUSCA DE CLIENTE POR ID
+    BUSCA DE ALUNO POR ID
     
-      GET /clients/1
+      GET /students/1
     
-    INSERÇÃO DE NOVO CLIENTE
+    INSERIR NOVO ALUNO
     
-      POST /clients
+      POST /students
       {
         "name": "Auricelio Freitas",
         "cpf": "12345678901",
@@ -53,9 +55,9 @@ DATE: 30/03/2024
         "income": 15089.0,
       }
   
-    ATUALIZAÇÃO DE CLIENTE
+    ATUALIZAR ALUNO
     
-      PUT /clients/1
+      PUT /students/1
       {
         "name": "Auricelio Moreira",
         "cpf": "12345678901",
@@ -63,7 +65,7 @@ DATE: 30/03/2024
         "income": 15089.0,
       }
   
-    DELEÇÃO DE CLIENTE
+    DELETAR ALUNO
     
        DELETE /clients/1
   
